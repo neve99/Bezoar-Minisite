@@ -112,7 +112,7 @@ header {
 
   max-width: 100%;
 
-
+  position: relative;
   stroke: #000;
 }
 
@@ -123,8 +123,47 @@ header {
 
 
 
+.s3-par-1 {
+  position: absolute;
+  top: 26%;
+  z-index: 1;
+}
 
+.s4-par-1 {
+  position: absolute;
 
+  z-index: 1;
+}
+
+.s4-par-2 {
+  position: absolute;
+  z-index: -1;
+  top: 8%;
+}
+
+.s5-par-1 {
+  position: absolute;
+  z-index: -1;
+  top: -10%;
+}
+
+.s5-par-2 {
+  position: absolute;
+  z-index: 1;
+  top: 33%;
+}
+
+.s5-par-3 {
+  position: absolute;
+  z-index: -1;
+  top: 64%;
+}
+
+.s6-par-1 {
+  position: absolute;
+  z-index: 1;
+  top: 23%;
+}
 
 
 
@@ -144,9 +183,11 @@ header {
     padding: 20px;
   }
 
-  .image-container div {
-    overflow: hidden;
+  .image-container {
+    overflow-x: hidden;
   }
+
+
 
   .image-container div img {
     width: 150%;
