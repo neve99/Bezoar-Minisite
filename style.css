@@ -19,7 +19,7 @@ body {
 
   background-color: #000;
 
-
+  transition: background-color 0.5s ease-in-out;
 }
 
 header {
@@ -57,15 +57,14 @@ header {
 }
 
 .s1 heroText {
-  width: 70%;
+  /* width: 70%; */
   height: auto;
-  position: absolute;
+  /* position: absolute; */
   top: 50%;
   /* Center vertically */
   left: 50%;
   /* Center horizontally */
   transform: translate(-50%, -50%);
-
 }
 
 .s1 .skeleton {
@@ -83,11 +82,55 @@ header {
 .s2 {
   height: 100vh;
   width: 100%;
-  background-color: #fff;
+
 }
 
+.s3 {
+
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+}
+
+.s3 .image-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  max-width: 100vw;
+
+
+  stroke: #000;
+}
+
+.image-container div {
+  display: flex;
+  justify-content: center;
+
+  max-width: 100%;
+
+
+  stroke: #000;
+}
+
+.image-container div img {
+  width: 100%;
+
+}
+
+
+
+
+
+
+
+
+
 /* Small devices (phones, portrait) */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .s1 img {
     width: 80%;
     /* Adjust image width for small devices */
@@ -97,27 +140,26 @@ header {
     font-size: 20px;
   }
 
+  header {
+    padding: 20px;
+  }
 
-}
+  .image-container div {
+    overflow: hidden;
+  }
 
-/* Medium devices (tablets, landscape) */
-@media (min-width: 600px) and (max-width: 768px) {
-  .s1 img {
-    width: 70%;
-    /* Adjust image width for medium devices */
+  .image-container div img {
+    width: 150%;
+    height: auto;
+    object-fit: contain;
+
   }
 }
 
-/* Large devices (desktops) */
-@media (min-width: 768px) and (max-width: 992px) {
-  .s1 img {
-    width: 70%;
-    /* Adjust image width for large devices */
-  }
-}
+
 
 /* Extra large devices (large desktops) */
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .s1 img {
     width: 70%;
     /* Adjust image width for extra large devices */
