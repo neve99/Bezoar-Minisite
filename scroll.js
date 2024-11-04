@@ -20,17 +20,18 @@ document.addEventListener('scroll', function () {
 
   //select all container elements
   const containers = document.querySelectorAll('.container');
-  sections.forEach(section => {
-    const topSection = section.offsetTop;
-    const midSection = topSection + section.offsetHeight / 2;
-    const distanceToSection = midViewport - midSection;
-    // console.log(distanceToSection);
 
-    const parallaxTags = section.querySelectorAll(`[data-parallax]`)
+  containers.forEach(container => {
+    const topContainer = container.offsetTop;
+    const midContainer = topContainer + container.offsetHeight / 2;
+    const distanceToContainer = midViewport - midContainer;
+    // console.log(distanceTocontainer);
+
+    const parallaxTags = container.querySelectorAll(`[data-parallax]`)
 
     parallaxTags.forEach(tag => {
       const speed = tag.getAttribute('data-parallax')
-      tag.style.transform = `translate(0, ${distanceToSection * speed}px)`
+      tag.style.transform = `translate(0, ${distanceToContainer * speed}px)`
     })
   })
 })
