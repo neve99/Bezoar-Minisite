@@ -188,7 +188,7 @@ section.s4 {
   }
 
   .image-container {
-    overflow-x: hidden;
+    overflow: hidden;
   }
 
 
