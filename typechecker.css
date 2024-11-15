@@ -122,6 +122,11 @@
 
     height: 50vh;
     width: 80vw;
+
+    z-index: 99;
+    background-color: black;
+    border-radius: 30px;
+
   }
 
   .right-section {
@@ -130,6 +135,8 @@
 
   .big-letter {
     font-size: 45vw;
+
+
   }
 
   .letter {
