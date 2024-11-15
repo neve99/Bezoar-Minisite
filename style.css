@@ -209,6 +209,7 @@ section.s4 {
 
   .left-section {
     display: none;
+    z-index: 99;
   }
 }
 
