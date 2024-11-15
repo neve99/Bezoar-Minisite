@@ -114,12 +114,18 @@
 
   .typechecker {
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .left-section {
 
     height: 50vh;
+    width: 80vw;
+  }
 
+  .right-section {
+    width: 80vw;
   }
 
   .big-letter {
