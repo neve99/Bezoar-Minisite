@@ -1,0 +1,76 @@
+.s5 {
+  color: #fff;
+  padding: 30px;
+}
+
+.typechecker {
+  display: flex;
+  flex-direction: row;
+}
+
+.left-section {
+  flex: 1;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+
+  height: 100vh;
+  position: sticky;
+
+  top: 0;
+
+}
+
+.right-section {
+  flex: 1;
+  padding: 0px;
+
+}
+
+.big-letter {
+
+
+  font-size: 30vw;
+
+
+}
+
+.letter-list {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  /* Create a grid with 10 columns */
+  gap: .5vw;
+  /* Adjust the gap between grid items as needed */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  padding-top: 30px;
+}
+
+.letter {
+  font-size: 2vw;
+  /* Adjust size as needed */
+  cursor: pointer;
+  text-align: center;
+  padding: 0.5vw;
+
+
+  border-radius: 5px;
+  /* Optional: Add border radius for rounded corners */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1 / 1;
+  /* Ensure each letter has the same width and height */
+}
+
+.s6 {
+  height: 100vh;
+}
+
+.alternate-ss02 {
+  font-feature-settings: "ss02" 1;
+
+}

@@ -2,15 +2,22 @@
 //backgroumd change
 document.addEventListener('scroll', function () {
   const section2 = document.querySelector('.s2');
+  const section4 = document.querySelector('.s4');
   const section2Top = section2.getBoundingClientRect().top;
   const section2Bottom = section2.getBoundingClientRect().bottom;
+  const section4Bottom = section4.getBoundingClientRect().bottom;
   const viewportHeight = window.innerHeight;
 
-  if (section2Bottom <= viewportHeight) {
+  if (section2Bottom <= viewportHeight && section4Bottom >= viewportHeight) {
     document.body.style.backgroundColor = 'white';
   } else {
     document.body.style.backgroundColor = 'black'; // Change back to original color
   }
+
+  // if (section4Bottom <= viewportHeight) {
+  //   document.body.style.backgroundColor = 'black';
+  // }
+
 });
 
 //parallel scroll
