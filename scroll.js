@@ -26,7 +26,7 @@ document.addEventListener('scroll', function () {
 
 });
 
-/* 
+
 //parallel scroll
 document.addEventListener('scroll', function () {
   const topViewport = window.scrollY;
@@ -49,8 +49,9 @@ document.addEventListener('scroll', function () {
     })
   })
 })
-*/
 
+
+/*
 document.addEventListener('DOMContentLoaded', function () {
   const containers = document.querySelectorAll('.container');
   let ticking = false;
@@ -83,3 +84,4 @@ document.addEventListener('DOMContentLoaded', function () {
 
   document.addEventListener('scroll', onScroll);
 });
+*/
