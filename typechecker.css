@@ -39,6 +39,8 @@
 
   top: 0;
 
+  width: 50vw;
+
   transition: background-color 0.5s ease-in-out;
 
 }
@@ -46,13 +48,14 @@
 .right-section {
   flex: 1;
   padding: 0px;
-
+  width: 50vw;
 }
 
 .big-letter {
 
 
-  font-size: 30vw;
+  font-size: 35vw;
+  transition: opacity 5s ease-in-out;
 
 
 }
