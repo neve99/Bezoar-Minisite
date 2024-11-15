@@ -1,3 +1,21 @@
+.ss01 {
+  font-feature-settings: "ss01" 1;
+}
+
+.ss02 {
+  font-feature-settings: "ss02" 1;
+}
+
+.ss03 {
+  font-feature-settings: "ss03" 1;
+}
+
+.ligatures {
+  font-family: 'Bezoar-Liga', sans-serif;
+  font-feature-settings: "liga" 1;
+}
+
+
 .s5 {
   color: #fff;
   padding: 30px;
@@ -20,6 +38,8 @@
   position: sticky;
 
   top: 0;
+
+  transition: background-color 0.5s ease-in-out;
 
 }
 
@@ -64,6 +84,13 @@
   align-items: center;
   aspect-ratio: 1 / 1;
   /* Ensure each letter has the same width and height */
+
+  transition: all 0.15s ease-in-out;
+}
+
+.letter:hover {
+
+  transform: scale(2);
 }
 
 .s6 {
@@ -72,5 +99,42 @@
 
 .alternate-ss02 {
   font-feature-settings: "ss02" 1;
+
+}
+
+/* Small devices (phones, portrait) */
+@media (max-width: 768px) {
+
+  /* .left-section {
+    display: none;
+  } */
+
+  .typechecker {
+    flex-direction: column;
+  }
+
+  .left-section {
+
+    height: 50vh;
+
+  }
+
+  .big-letter {
+    font-size: 45vw;
+  }
+
+  .letter {
+    font-size: 5vw;
+  }
+}
+
+/* Extra large devices (large desktops) */
+@media (min-width: 769px) {
+
+
+  .left-section {
+    display: flex;
+  }
+
 
 }

@@ -8,10 +8,18 @@ document.addEventListener('scroll', function () {
   const section4Bottom = section4.getBoundingClientRect().bottom;
   const viewportHeight = window.innerHeight;
 
+  const leftSection = document.querySelector('.left-section');
+
   if (section2Bottom <= viewportHeight && section4Bottom >= viewportHeight) {
     document.body.style.backgroundColor = 'white';
+    leftSection.style.backgroundColor = 'white';
+
   } else {
     document.body.style.backgroundColor = 'black'; // Change back to original color
+
+
+    leftSection.style.backgroundColor = 'black';
+
   }
 
   // if (section4Bottom <= viewportHeight) {

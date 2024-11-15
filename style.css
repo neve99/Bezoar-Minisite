@@ -4,6 +4,11 @@
     url('assets/font/Bezoar-Bold.woff2');
 }
 
+@font-face {
+  font-family: 'Bezoar-Liga';
+  src: url(assets/font/PlayfairDisplay-ExtraBold.ttf);
+}
+
 *,
 *::before,
 *::after {
@@ -16,7 +21,7 @@ body {
   line-height: 1.5;
   margin: 0;
   padding: 0;
-
+  letter-spacing: normal;
   background-color: #000;
 
   transition: background-color 0.5s ease-in-out;
@@ -28,7 +33,7 @@ header {
   justify-content: space-between;
   width: 100%;
   mix-blend-mode: difference;
-
+  z-index: 100;
 
 
 
@@ -199,14 +204,24 @@ section.s4 {
     object-fit: contain;
 
   }
+
+
+
+  .left-section {
+    display: none;
+  }
 }
 
 
 
 /* Extra large devices (large desktops) */
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .s1 img {
     width: 70%;
     /* Adjust image width for extra large devices */
+  }
+
+  .left-section {
+    display: flex;
   }
 }
