@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
   rightSectionLetters.forEach(letter => {
     letter.addEventListener('mouseover', () => {
       leftSectionBigLetter.textContent = letter.textContent;
-      const classes = ['ss01', 'ss02', 'ss03', 'ligatures'];
+      const classes = ['ss01', 'ss02', 'ss03', 'ligatures', 'oldstyle'];
       classes.forEach(cls => {
         if (letter.classList.contains(cls)) {
           leftSectionBigLetter.classList.add(cls);

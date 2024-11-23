@@ -10,6 +10,10 @@
   font-feature-settings: "ss03" 1;
 }
 
+.oldstyle {
+  font-feature-settings: "onum" 1;
+}
+
 .ligatures {
   font-family: 'Bezoar-Liga', sans-serif;
   font-feature-settings: "liga" 1;
@@ -49,6 +53,8 @@
   flex: 1;
   padding: 0px;
   width: 50vw;
+  /* this is right section margin top */
+  margin-top: 180px;
 }
 
 .big-letter {
@@ -97,13 +103,10 @@
 }
 
 .s6 {
-  height: 100vh;
+  height: 30vh;
 }
 
-.alternate-ss02 {
-  font-feature-settings: "ss02" 1;
 
-}
 
 /* Small devices (phones, portrait) */
 @media (max-width: 768px) {
@@ -132,6 +135,7 @@
   }
 
   .right-section {
+    margin-top: 300px;
     width: 80vw;
   }
 
