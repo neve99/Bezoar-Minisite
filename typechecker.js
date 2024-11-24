@@ -48,6 +48,7 @@ lineheightTag.addEventListener('input', () => {
   lineheightOutput.textContent = lineheightTag.value;
 });
 
+
 //spacing slider
 
 spacingTag.addEventListener('input', () => {
@@ -56,19 +57,71 @@ spacingTag.addEventListener('input', () => {
   spacingOutput.textContent = Math.round(spacingTag.value * 100) + '%';
 });
 
+/*
 // stylistic sets
 styleTag.addEventListener('input', () => {
   const selectedClass = styleTag.value;
+  const isOldStyle = outputTag.classList.contains('oldstyle');
+
   outputTag.className = 'output'; // Remove all previous classes
   if (selectedClass) {
     outputTag.classList.add(selectedClass);
   }
+
+  // if (isOldStyle) {
+  //   outputTag.classList.add('oldstyle');
+  // }
+  // console.log(outputTag.classList);
+
+  if (isOldStyle) {
+    if (featureSettings) {
+      featureSettings += ', ';
+    }
+    featureSettings += '"onum" 1';
+  }
+
+  outputTag.style.fontFeatureSettings = featureSettings;
+
 })
 
 // old style numbers
 oldStyleNumbersTag.addEventListener('click', () => {
   oldStyleNumbersTag.classList.toggle('button-selected');
   outputTag.classList.toggle('oldstyle');
+  console.log(outputTag.classList);
+});
+*/
+
+// Function to update font-feature-settings
+function updateFontFeatureSettings() {
+  const selectedClass = styleTag.value;
+  const isOldStyle = outputTag.classList.contains('oldstyle');
+  let featureSettings = '';
+
+  if (selectedClass) {
+    featureSettings += `"${selectedClass}" 1`;
+  }
+
+  if (isOldStyle) {
+    if (featureSettings) {
+      featureSettings += ', ';
+    }
+    featureSettings += '"onum" 1';
+  }
+
+  outputTag.style.fontFeatureSettings = featureSettings;
+}
+
+// Stylistic sets
+styleTag.addEventListener('input', () => {
+  updateFontFeatureSettings();
+});
+
+// Old style numbers
+oldStyleNumbersTag.addEventListener('click', () => {
+  oldStyleNumbersTag.classList.toggle('button-selected');
+  outputTag.classList.toggle('oldstyle');
+  updateFontFeatureSettings();
 });
 
 
