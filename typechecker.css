@@ -10,6 +10,10 @@
   font-feature-settings: "ss03" 1;
 }
 
+.ss04 {
+  font-feature-settings: "ss04" 1;
+}
+
 .oldstyle {
   font-feature-settings: "onum" 1;
 }

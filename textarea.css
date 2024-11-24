@@ -11,6 +11,21 @@ label {
   margin-bottom: 10px;
 }
 
+label span {
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+  width: 40px;
+}
+
+.typesize-output {
+  width: 45px;
+}
+
+.lineheight-output {
+  width: 38px;
+}
+
 .options {
   display: flex;
   flex-direction: wrap;
@@ -83,6 +98,9 @@ select {
 
   box-sizing: border-box;
   appearance: none;
+
+  cursor: pointer;
+
   /* Standard */
   -webkit-appearance: none;
   /* Safari */
@@ -107,8 +125,10 @@ select {
   right: 10px;
   top: 50%;
   color: #fff;
-  font-size: 12px;
+  font-size: 10px;
   transform: translateY(-50%);
+
+  cursor: pointer;
   pointer-events: none;
   /* Ensure the arrow is not clickable */
 }
@@ -126,6 +146,10 @@ button {
   outline: none;
 
   box-sizing: border-box;
+  cursor: pointer;
+
+  transition: all 0.2s;
+
   appearance: none;
   /* Standard */
   -webkit-appearance: none;
@@ -134,6 +158,11 @@ button {
   /* Firefox */
   -ms-appearance: none;
   /* IE */
+}
+
+.button-selected {
+  background-color: #fff;
+  color: black;
 }
 
 
