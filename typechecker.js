@@ -34,6 +34,9 @@ const spacingOutput = document.querySelector('.spacing-output');
 const styleTag = document.querySelector('select[name="stylistic-sets"]');
 
 const oldStyleNumbersTag = document.querySelector('.oldstyle-numbers');
+
+const ligaturesTag = document.querySelector('.btn-ligatures');
+
 //fontsize slider
 
 typesizeTag.addEventListener('input', () => {
@@ -123,5 +126,11 @@ oldStyleNumbersTag.addEventListener('click', () => {
   outputTag.classList.toggle('oldstyle');
   updateFontFeatureSettings();
 });
+
+// Ligatures
+ligaturesTag.addEventListener('click', () => {
+  ligaturesTag.classList.toggle('button-selected');
+  outputTag.classList.toggle('ligatures');
+})
 
 

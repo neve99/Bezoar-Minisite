@@ -19,8 +19,7 @@
 }
 
 .ligatures {
-  font-family: 'Bezoar-Liga', sans-serif;
-  font-feature-settings: "liga" 1;
+  font-variant-ligatures: discretionary-ligatures;
 }
 
 
