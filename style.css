@@ -4,15 +4,13 @@
     url('assets/font/Bezoar-Bold.woff2');
 }
 
-@font-face {
-  font-family: 'Bezoar-Liga';
-  src: url(assets/font/PlayfairDisplay-ExtraBold.ttf);
-}
+
 
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+  margin: 0;
 }
 
 body {
@@ -25,7 +23,7 @@ body {
   background-color: #000;
 
   transition: background-color 0.5s ease-in-out;
-  cursor: url('assets/cursor/cursor_shiny.png'), auto;
+  /* cursor: url('assets/cursor/cursor_shiny.png'), auto; */
 }
 
 header {
@@ -35,6 +33,8 @@ header {
   width: 100%;
   mix-blend-mode: difference;
   z-index: 100;
+  position: fixed;
+
 
 }
 
@@ -44,11 +44,72 @@ header a {
 
 }
 
-header {
-  display: flex;
-  width: 100%;
-  position: fixed;
+header button {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-size: 32px;
+  cursor: pointer;
+  padding: 0;
 }
+
+/* contact */
+
+.contact-field {
+  position: fixed;
+  width: 443px;
+
+  top: 90px;
+  right: -500px;
+
+  transition: right 0.5s ease-in-out, top 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.show-contact {
+  right: 30px;
+
+}
+
+.flag-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.contact-content {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+  padding: 16px 24px;
+
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.content-wrapper h2 {
+  font-size: 32px;
+}
+
+.content-wrapper p {
+  font-size: 16px;
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+}
+
+.content-wrapper a {
+  font-size: 16px;
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+  color: #000;
+  text-decoration: underline;
+}
+
+
 
 .s1 {
   display: flex;
@@ -187,6 +248,10 @@ section.s4 {
     font-size: 20px;
   }
 
+  header button {
+    font-size: 20px;
+  }
+
   header {
     padding: 20px;
   }
@@ -202,6 +267,16 @@ section.s4 {
     height: auto;
     object-fit: contain;
 
+  }
+
+
+
+  .show-contact {
+    top: 70px;
+    right: 50%;
+    transform: translateX(50%) scale(0.8);
+    z-index: 100;
+    transition: right 0.5s ease-in-out, transform 0.5s ease-in-out;
   }
 
 

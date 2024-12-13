@@ -50,38 +50,3 @@ document.addEventListener('scroll', function () {
   })
 })
 
-
-/*
-document.addEventListener('DOMContentLoaded', function () {
-  const containers = document.querySelectorAll('.container');
-  let ticking = false;
-
-  function onScroll() {
-    if (!ticking) {
-      window.requestAnimationFrame(function () {
-        const topViewport = window.scrollY;
-        const midViewport = topViewport + window.innerHeight / 2;
-
-        containers.forEach(container => {
-          const topContainer = container.offsetTop;
-          const midContainer = topContainer + container.offsetHeight / 2;
-          const distanceToContainer = midViewport - midContainer;
-
-          const parallaxTags = container.querySelectorAll('[data-parallax]');
-
-          parallaxTags.forEach(tag => {
-            const speed = tag.getAttribute('data-parallax');
-            tag.style.transform = `translate3d(0, ${distanceToContainer * speed}px, 0)`;
-          });
-        });
-
-        ticking = false;
-      });
-
-      ticking = true;
-    }
-  }
-
-  document.addEventListener('scroll', onScroll);
-});
-*/

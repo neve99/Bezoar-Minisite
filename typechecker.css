@@ -100,6 +100,8 @@
   transition: all 0.1s;
 }
 
+.smaller .letter {}
+
 .letter:hover {
 
   transform: scale(2);
@@ -150,6 +152,10 @@
 
   .letter {
     font-size: 5vw;
+  }
+
+  .smaller .letter {
+    font-size: 4vw;
   }
 }
 
